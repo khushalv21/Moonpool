@@ -20,6 +20,28 @@
 
 A side project of mine: I wanted my notch to do a few things properly instead of a lot of things badly. It shows what Apple Music is playing, lets me control it, and tells me about the battery and the lock screen. It is not a widget board and doesn't want to be.
 
+## Preview
+
+Animated illustrations of the interactions, drawn from the app's real timings (not screen recordings).
+
+**Swipe to skip.** Swipe the closed pill: a skip arrow appears, the track changes, and the new artwork, title and artist roll in before it folds away.
+
+<p align="center">
+  <img src="assets/demo-pill.svg" alt="Closed notch: swipe to skip, with the new track rolling in" width="640">
+</p>
+
+**The player.** Click to expand into a compact player. Pausing dims the artwork and swaps the glyph.
+
+<p align="center">
+  <img src="assets/demo-player.svg" alt="Expanded player with scrubber and transport controls" width="640">
+</p>
+
+**Lock, unlock and battery.** A padlock that looks different locked and unlocked, and battery popups that sweep up to the real level.
+
+<p align="center">
+  <img src="assets/demo-states.svg" alt="Padlock lock and unlock, then charging, low battery and Low Power popups" width="640">
+</p>
+
 ## Features
 
 ### Apple Music in the closed notch
