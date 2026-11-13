@@ -82,7 +82,7 @@ xcodebuild -project boringNotch.xcodeproj -scheme boringNotch -destination "gene
 - **Lock/unlock timing.** `onScreenUnlocked` deliberately waits 150 ms before disabling SkyLight to avoid flicker. Any lock animation has to account for that delay (`REDESIGN.md` §6.3).
 - **Multi-display** support (`showOnAllDisplays`) creates one window and `BoringViewModel` per screen in `AppDelegate`. Keep per-screen state out of singletons.
 - The `components/Live activities` folder name contains a space. Quote paths in shell commands.
-- `README.md` is the user's own. It credits Boring Notch / the Boring Team and explains the GPL-3.0 licensing; keep both.
+- `README.md` is the user's own and reads as a personal side project. Keep it short: credit to Boring Notch is a single line under the tagline (plus the GPL-3.0 badge); there is deliberately no install, build or long credits/licensing section. The legal side lives in `LICENSE`, `THIRD_PARTY_LICENSES` and the original copyright headers in source files, which must stay.
 
 ## Working rules for this project
 

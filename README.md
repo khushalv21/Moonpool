@@ -6,7 +6,7 @@
 
 <p align="center">
   A calm, Dynamic-Island-style notch for Apple Music on your Mac.<br>
-  Free and open source, based on <a href="https://github.com/TheBoredTeam/boring.notch">Boring Notch</a>.
+  A personal project, forked from <a href="https://github.com/TheBoredTeam/boring.notch">Boring Notch</a> (GPL-3.0).
 </p>
 
 <p align="center">
@@ -18,9 +18,7 @@
 
 ## What it is
 
-Moonpool turns the notch (or the top edge of any display) into a small, quiet live area, in the spirit of the iPhone's Dynamic Island. It does a few things and tries to do them well: it shows what Apple Music is playing, lets you control it, and tells you about the battery and the lock screen. It does not try to be a widget board.
-
-It is a personal redesign of [Boring Notch](https://github.com/TheBoredTeam/boring.notch) by the Boring Team. See [Credits and licensing](#credits-and-licensing) for exactly what that means.
+A side project of mine: I wanted my notch to do a few things properly instead of a lot of things badly. It shows what Apple Music is playing, lets me control it, and tells me about the battery and the lock screen. It is not a widget board and doesn't want to be.
 
 ## Features
 
@@ -62,23 +60,6 @@ No volume or brightness HUD, no file shelf, no clipboard manager, no calendar, n
 - macOS 14 (Sonoma) or later
 - Apple Music (the Music app)
 
-## Install
-Download the latest `.dmg` from the [Releases](https://github.com/khushalv21/Moonpool/releases) page, open it and drag the app to **Applications**.
-
-The first time you play music, macOS asks whether Moonpool may control **Music**. Allow it: that is how the app reads the current song and sends play, pause and skip. You can change this later in **System Settings → Privacy & Security → Automation**.
-
-## Build from source
-You need Xcode and, for a signed build, an Apple Developer certificate.
-
-```bash
-git clone https://github.com/khushalv21/Moonpool.git
-cd Moonpool
-xcodebuild -project boringNotch.xcodeproj -scheme boringNotch \
-  -destination "generic/platform=macOS" build CODE_SIGNING_ALLOWED=NO
-```
-
-Or open `boringNotch.xcodeproj` in Xcode, choose your signing team, and run. (The Xcode project and source folder keep their original names for now.)
-
 ## Settings
 Open **Settings** from the menu bar icon or by right-clicking the notch.
 
@@ -97,30 +78,3 @@ Open **Settings** from the menu bar icon or by right-clicking the notch.
 
 ## Privacy
 Moonpool has **no network access** (the app sandbox is on and no network permission is requested) and collects no data. It reads your Music app's current track and controls playback through macOS Apple Events, and it reads battery and power state from the system. Nothing leaves your Mac.
-
-## Credits and licensing
-
-**This project is a fork. I did not write it from scratch, and I am not claiming otherwise.**
-
-Moonpool is built on **[Boring Notch](https://github.com/TheBoredTeam/boring.notch)**, created by the **Boring Team ([TheBoredTeam](https://github.com/TheBoredTeam))** and its contributors. The window handling around the notch, the lock-screen overlay, the Apple Music plumbing and much of the project structure come from their work. My changes are a redesign on top of it: a stripped-down feature set, a new expanded player, the track-change, swipe, pause/resume, lock and battery interactions described above, and the rebrand. Huge thanks to the Boring Team for making the original and giving it away.
-
-### License
-Boring Notch is licensed under the **GNU General Public License v3.0**, and so is this project. That means:
-
-- You may use, study, change and share this code, including commercially, under the terms of the GPL-3.0.
-- If you distribute the app or a modified version, you must make the corresponding source code available under the same license.
-- The original copyright notices stay in the source files, and the full license text is in [`LICENSE`](LICENSE). I have not removed them and I will not.
-- There is **no warranty**.
-
-I have renamed and redrawn the product, so the Boring Notch name and logo are not used here, and this project is **not affiliated with or endorsed by** the Boring Team. Boring Notch and its authors keep their own copyrights; my modifications are released under the same GPL-3.0.
-
-### Third-party software
-This app uses open-source libraries, each under its own license:
-[Defaults](https://github.com/sindresorhus/Defaults), [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) and [LaunchAtLogin-Modern](https://github.com/sindresorhus/LaunchAtLogin-Modern) by Sindre Sorhus, [SkyLightWindow](https://github.com/Lakr233/SkyLightWindow) by Lakr233, and [MacroVisionKit](https://github.com/TheBoredTeam/MacroVisionKit) by theboringhumane. Their license notices are in [`THIRD_PARTY_LICENSES`](THIRD_PARTY_LICENSES).
-
-### Copyright
-Moonpool is a modified version of Boring Notch.
-
-- Original Boring Notch code: © [TheBoredTeam](https://github.com/TheBoredTeam) and its contributors. The copyright notices in each source file are unchanged.
-- Third-party libraries: © their respective authors, see [`THIRD_PARTY_LICENSES`](THIRD_PARTY_LICENSES) and the project links above.
-- Moonpool's own changes are released under the same GPL-3.0 license.
