@@ -54,9 +54,8 @@ class BoringViewModel: NSObject, ObservableObject {
     private func setupDetectorObserver() {
         // Publisher for the user’s fullscreen detection setting
         let enabledPublisher = Defaults
-            .publisher(.hideNotchOption)
+            .publisher(.hideInFullscreen)
             .map(\.newValue)
-            .map { $0 != .never }
             .removeDuplicates()
 
         // Publisher for the current screen UUID (non-nil, distinct)
@@ -125,7 +124,7 @@ class BoringViewModel: NSObject, ObservableObject {
 
     /// The notch only has something to show while Apple Music is playing (or just paused).
     var hasContent: Bool {
-        MusicManager.shared.isPlaying || !MusicManager.shared.isPlayerIdle
+        !hideOnClosed && (MusicManager.shared.isPlaying || !MusicManager.shared.isPlayerIdle)
     }
 
     func open() {

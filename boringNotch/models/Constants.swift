@@ -18,12 +18,6 @@ let appVersion = "\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as
 let temporaryDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first!
 let spacing: CGFloat = 16
 
-enum HideNotchOption: String, Defaults.Serializable {
-    case always
-    case nowPlayingOnly
-    case never
-}
-
 extension Defaults.Keys {
     // MARK: General
     static let menubarIcon = Key<Bool>("menubarIcon", default: true)
@@ -72,8 +66,9 @@ extension Defaults.Keys {
     static let showBatteryPercentage = Key<Bool>("showBatteryPercentage", default: true)
     
     
-    // MARK: Fullscreen Media Detection
-    static let hideNotchOption = Key<HideNotchOption>("hideNotchOption", default: .nowPlayingOnly)
+    // MARK: Full-screen apps
+    /// Hide the notch UI while the display is showing a full-screen app.
+    static let hideInFullscreen = Key<Bool>("hideInFullscreen", default: true)
     
     
     // MARK: Advanced Settings

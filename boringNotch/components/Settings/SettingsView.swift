@@ -117,6 +117,9 @@ private struct NotchSettings: View {
                 Defaults.Toggle(key: .showOnLockScreen) {
                     Text("Keep visible on the lock screen")
                 }
+                Defaults.Toggle(key: .hideInFullscreen) {
+                    Text("Hide in full-screen apps")
+                }
                 Defaults.Toggle(key: .hideFromScreenRecording) {
                     Text("Hide from screen recording")
                 }

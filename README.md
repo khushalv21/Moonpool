@@ -48,7 +48,7 @@ The open notch can also show the battery percentage. Colour is never the only si
 
 ### Everywhere else
 - Works on notched MacBooks and on other displays, on one display or all of them.
-- Hides itself over fullscreen video.
+- Hides itself over full-screen apps, so it only shows on your normal desktop (a setting, on by default).
 - Menu bar icon (a cratered moon), launch at login, optional haptics.
 - Respects macOS **Reduce Motion**: movement is replaced with simple fades.
 - Animations are driven by the system where possible, so the notch uses almost no CPU while idle.
@@ -66,7 +66,7 @@ Open **Settings** from the menu bar icon or by right-clicking the notch.
 | Tab | What you can change |
 |---|---|
 | General | Menu bar icon, launch at login, which display to use, follow the active display |
-| Notch | Haptics, lock animation, show on the lock screen, hide from screen recording, notch height |
+| Notch | Haptics, lock animation, show on the lock screen, hide in full-screen apps, hide from screen recording, notch height |
 | Music | Tint text with the album colour, colour the visualizer, glow behind the artwork, progress bar colour |
 | Battery | Show the battery and percentage in the open notch, show power-change popups |
 

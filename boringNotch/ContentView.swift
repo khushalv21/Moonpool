@@ -75,7 +75,7 @@ struct ContentView: View {
         if coordinator.lockTransition != nil && vm.notchState == .closed {
             chinWidth += 2 * lockWingWidth
         } else if coordinator.expandingView.type == .battery && coordinator.expandingView.show
-            && vm.notchState == .closed && Defaults[.showPowerStatusNotifications]
+            && vm.notchState == .closed && Defaults[.showPowerStatusNotifications] && !vm.hideOnClosed
         {
             chinWidth += 2 * batteryWingWidth
         } else if (!coordinator.expandingView.show || coordinator.expandingView.type == .music)
@@ -228,7 +228,7 @@ struct ContentView: View {
                 if let lockKind = coordinator.lockTransition, vm.notchState == .closed {
                     LockActivity(kind: lockKind)
                 } else if coordinator.expandingView.type == .battery && coordinator.expandingView.show
-                    && vm.notchState == .closed && Defaults[.showPowerStatusNotifications]
+                    && vm.notchState == .closed && Defaults[.showPowerStatusNotifications] && !vm.hideOnClosed
                 {
                     BatteryEventActivity()
                 } else if (!coordinator.expandingView.show || coordinator.expandingView.type == .music)
