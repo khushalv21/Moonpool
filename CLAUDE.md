@@ -33,9 +33,9 @@ README repo links use `khushalv21/Moonpool`; fix them if the real repo differs.
 
 The app icon is option A "Midnight": a near-black macOS squircle with the cratered moon (same geometry as `MoonIcon`), rendered to `Assets.xcassets/AppIcon.appiconset` (10 PNGs, 16 to 1024 px); the unused upstream image sets were deleted. Still to do: `git init`, and a "Moonpool" name / trademark check by the user. Internal type and folder names (`BoringNotchSkyLightWindow`, `boringNotch/`, the scheme) keep their old names on purpose.
 
-## README preview images
+## README demo
 
-`assets/demo-pill.svg`, `demo-player.svg` and `demo-states.svg` are hand-generated animated SVG illustrations (SMIL, no scripts, so GitHub plays them) of the real interactions, with timings taken from the app code. They are not screen recordings and the README says so. If an animation's timing or look changes in the app, update the matching SVG too.
+The animated SVG illustrations were removed (not polished enough). The user will send a real screen recording to add to the README; wait for it. `assets/icon.png` (README header icon) stays.
 
 ## Repo facts
 
