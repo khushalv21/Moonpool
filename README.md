@@ -29,7 +29,7 @@ A side project of mine: I wanted my notch to do a few things properly instead of
 - **Pause and play states.** Pausing swaps the visualizer for a pause glyph and dims the artwork. After a short wait the pill folds back into the notch. Resuming shows a play glyph before the visualizer returns.
 
 ### The expanded player
-Click the notch, swipe down on it, or press the shortcut to open a compact player:
+Click the notch or swipe down on it to open a compact player:
 - Album art, a scrolling title and the artist.
 - A scrubber you can drag, with the elapsed time on the left and the time remaining on the right.
 - Previous, play/pause and next, with a soft pressed animation.
@@ -69,12 +69,6 @@ Open **Settings** from the menu bar icon or by right-clicking the notch.
 | Notch | Haptics, lock animation, show on the lock screen, hide from screen recording, notch height |
 | Music | Tint text with the album colour, colour the visualizer, glow behind the artwork, progress bar colour |
 | Battery | Show the battery and percentage in the open notch, show power-change popups |
-
-## Keyboard shortcuts
-| Shortcut | Action |
-|---|---|
-| ⌘⇧I | Open or close the notch |
-| ⌘⇧H | Preview the track-change popup |
 
 ## Privacy
 Moonpool has **no network access** (the app sandbox is on and no network permission is requested) and collects no data. It reads your Music app's current track and controls playback through macOS Apple Events, and it reads battery and power state from the system. Nothing leaves your Mac.

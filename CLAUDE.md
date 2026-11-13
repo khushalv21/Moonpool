@@ -19,7 +19,7 @@ The user picked these on 2026-11-12. Start one only when they say so; build and 
 1. **Swipe to skip on the closed pill.** Built; the user confirmed it works (strong double haptic). The track-change "roll" peek (REDESIGN.md §14) is built and awaiting their check. Swipe left = next, right = previous (two-finger trackpad swipe or click-drag); a tap still opens the notch.
 2. **Mic and camera in-use dot.** Orange (mic) / green (camera) dot beside the notch, as on the iPhone island. Must be checked against the App Sandbox before promising it works (public CoreMediaIO / CoreAudio "running somewhere" properties).
 3. **Paused state.** Built, awaiting the user's check. A quiet pause glyph in the closed pill before it hides, instead of a plain fade.
-4. **Timer.** Countdown started from a global shortcut, shown in the closed notch. Needs an input UI and a shortcut; ask before choosing either.
+4. **Timer.** Countdown shown in the closed notch. There are no global keyboard shortcuts in this app any more, so it needs another way to start; ask the user how before building.
 
 Not approved (don't add): next meeting / Calendar, weather, clipboard or file shelf, volume or brightness.
 
@@ -27,7 +27,7 @@ Not approved (don't add): next meeting / Calendar, weather, clipboard or file sh
 
 Launch plan is deliberately small: a **public GitHub repo only**, a side project. No website page, DMG hosting, notarization or Mac App Store work unless the user asks later. Open source under GPL-3.0. Credit goes to the original authors: the README's copyright section credits TheBoredTeam and contributors and names no individual; do not add personal names, personal websites or local paths to the README, source or this file.
 
-Done: display name, `PRODUCT_NAME`, menu title, settings window title and Quit/Restart strings are "Moonpool"; bundle ID `xyz.kvrma.moonpool` (settings from the old ID do not carry over); the menu bar icon is a drawn cratered moon (`MoonIcon` in `boringNotch/boringNotchApp.swift`, a template image) which the user likes; the README is rewritten with credits and licensing; upstream leftovers are deleted; unused clipboard / microphone / backlight shortcuts are removed.
+Done: display name, `PRODUCT_NAME`, menu title, settings window title and Quit/Restart strings are "Moonpool"; bundle ID `xyz.kvrma.moonpool` (settings from the old ID do not carry over); the menu bar icon is a drawn cratered moon (`MoonIcon` in `boringNotch/boringNotchApp.swift`, a template image) which the user likes; the README is rewritten with credits and licensing; upstream leftovers are deleted; all global keyboard shortcuts and the KeyboardShortcuts package are removed (the standard menu key equivalents, Command-comma and Command-Q, remain).
 
 README repo links use `khushalv21/Moonpool`; fix them if the real repo differs.
 

@@ -372,3 +372,7 @@ Lock and unlock: one custom padlock drawn from shapes, always white (no green). 
 
 Battery popups: label left, percentage plus a shape-drawn battery on the right. The fill sweeps from empty to the real level (spring 0.6, no bounce) while the percentage rolls up; the mark lands once afterwards (bolt, plug, check, warning). Nothing loops (the old charging pulse is gone). Labels: Charging, Plugged in, Not charging, On battery, Low battery, Fully charged, Low Power On / Off. Plugging in waits 0.6 s so "Charging" replaces "Plugged in" (one popup, not two). Low battery now warns at 20% and again at 10% while unplugged. Fills: green for charging and fully charged, white for plugged / on battery, red at 20% or below, yellow for Low Power Mode.
 
+## 16. Update: keyboard shortcuts removed
+
+Both remaining global shortcuts (toggle notch, preview track popup) and the KeyboardShortcuts package were removed, so the app registers no global hotkeys. The notch opens by click or swipe down, and closes by swipe up or when the cursor leaves. Open item: the timer (section 13) needs another way to start.
+
